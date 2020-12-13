@@ -1,10 +1,5 @@
-
 #include "Edge.h"
 
-Node* Edge::getDestination() {
-    // TODO: Implement me.
-}
+Node* Edge::getDestination() { return destination; }
 
-int Edge::getLength() const {
-    // TODO: Implement me.
-}
+int Edge::getLength() const { return length; }

@@ -1,17 +1,18 @@
 #ifndef EDGE_H
 #define EDGE_H
 
-#include "Node.h"
+class Node;
 
 class Edge {
     public:
-        Edge(Node* destination, int length) : destination{destination}, length{length} {};
-        Node* getDestination();
+        Edge() = default;
+        Edge(Node* destination, int length) : _destination{destination}, _length{length} {};
+        Node* getDest() const;
         int getLength() const;
 
     private:
-        Node* destination;
-        int length;
+        Node* _destination;
+        int _length;
 };
 
 #endif

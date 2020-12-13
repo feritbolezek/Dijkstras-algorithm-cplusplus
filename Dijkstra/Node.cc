@@ -6,6 +6,9 @@ void Node::setValue(int v) { value = v; }
 
 int Node::getValue() const { return value; }
 
-void Node::addEdge(Node* destination, int length) { edges.push_back(Edge(destination,length)); }
+void Node::addEdge(Node* destination, int length) { 
+    Edge e{destination,length};
+    edges.push_back(e); 
+    }
 
 const vector<Edge>& Node::getEdges() const { return edges; }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cassert>
-#include "graph.h"
-#include "dijkstra.h"
+#include "../graph.h"
+#include "../dijkstra.h"
 
 using std::cout;
 using std::endl;

@@ -27,4 +27,5 @@ class Node {
         vector<Edge> edges;
 
 };
+
 #endif

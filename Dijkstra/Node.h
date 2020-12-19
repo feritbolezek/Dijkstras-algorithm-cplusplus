@@ -17,6 +17,8 @@ class Node {
         string getName() const;
         void setValue(int v);
         int getValue() const;
+        Node* getParent();
+        void setParent(Node* node);
         void addEdge(Node* destination, int length);
         const vector<Edge>& getEdges() const;
         static const int max_value = numeric_limits<int>::max();
@@ -25,6 +27,7 @@ class Node {
         string name;
         int value;
         vector<Edge> edges;
+        Node* parent;
 
 };
 

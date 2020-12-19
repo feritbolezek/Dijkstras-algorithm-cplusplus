@@ -13,11 +13,14 @@ class Graph {
 
     public:
         Graph() = default;
+        Graph(std::istream& in);
+        ~Graph() { for (auto &n : nodes) delete n; };
         void addNode(const string& name);
         Node* find(const string& name);
         void resetVals();
         vector<Node*>::iterator begin() { return nodes.begin(); };
         vector<Node*>::iterator end() { return nodes.end(); };
+        void printShortestPath(std::string dest);
 
 
 

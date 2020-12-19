@@ -21,7 +21,7 @@ LDFLAGS =   -g
 #LDFLAGS +=  -stdlib=libc++
 
 # Targets
-PROGS = test_graph_small test_nodeset test_dijkstra test_graph_nofile
+PROGS = test_graph_small test_nodeset test_dijkstra test_graph_nofile test_graph_file
 
 all: $(PROGS)
 
@@ -34,6 +34,7 @@ test_graph_small: test_graph_small.o ../graph.o ../Edge.o ../Node.o
 test_nodeset: test_nodeset.o ../Edge.o ../Node.o ../NodeSet.o
 test_dijkstra: test_dijkstra.o ../graph.o ../Edge.o ../Node.o ../NodeSet.o ../dijkstra.o
 test_graph_nofile: test_graph_nofile.o ../graph.o ../Edge.o ../Node.o ../NodeSet.o ../dijkstra.o
+test_graph_file: test_graph_file.o ../graph.o ../Edge.o ../Node.o ../NodeSet.o ../dijkstra.o
 # Phony targets
 .PHONY: all test clean distclean
 

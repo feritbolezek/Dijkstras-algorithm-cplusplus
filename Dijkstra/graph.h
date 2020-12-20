@@ -20,9 +20,6 @@ class Graph {
         void resetVals();
         vector<Node*>::iterator begin() { return nodes.begin(); };
         vector<Node*>::iterator end() { return nodes.end(); };
-        void printShortestPath(std::string dest);
-
-
 
     private:
         vector<Node*> nodes;

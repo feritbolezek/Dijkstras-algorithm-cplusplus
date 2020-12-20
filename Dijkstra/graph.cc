@@ -74,26 +74,3 @@ void Graph::resetVals() {
     for (auto &n : nodes) (*n).setValue(Node::max_value);
 
 }
-
-void Graph::printShortestPath(std::string dest) {
-    
-    std::stack<Node*> path;
-    Node* n = find(dest);    
-
-    while (n != nullptr) {
-        path.push(n);
-        n = n->getParent();
-    }
-
-    while(!path.empty()) {
-        Node* i = path.top();
-        path.pop();
-
-        std::cout << i->getName() << " ";
-    }
-
-    std::cout << find(dest)->getValue(); // TODO: Fixa om tid över
-    std::cout << std::endl;
-    
-
-}

@@ -1,4 +1,5 @@
 #include "Node.h"
+#include <iostream>
 
 string Node::getName() const { return name; }
 

@@ -19,7 +19,7 @@ void dijkstra(Node* start) {
             Node* d = i.getDest();
             int a = n->getValue() + l;
 
-            if (a < (*d).getValue()) { // Kolla i bookmarks, vi kan passera in en function som returnerar en bool. (Funktionen kan utföra sin egen beräkning som ger svar på denna if satsen)
+            if (a < (*d).getValue()) {
 
                 d->setParent(n);
                 (*d).setValue(a);
@@ -76,7 +76,7 @@ void printShortestPath(Node* dest) {
     }
 
 
-    std::cout << dest->getValue(); // TODO: Fixa om tid över
+    std::cout << dest->getValue();
     std::cout << std::endl;
     
 
